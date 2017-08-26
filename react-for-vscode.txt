@@ -1,0 +1,67 @@
+"Cria Class com Connect Redux": {
+		"prefix": "xrcr",
+		"body": [
+			"import React, { Component } from 'react';",
+			"",
+			"import { connect } from 'react-redux';",
+			"",
+			"",
+			"class $1 extends Component {",
+			"\tstate = { $2 }",
+			"\trender() {",
+			"\t\treturn (",
+			"\t\t\t$3",
+			"\t\t);",
+			"\t}",
+			"}",
+			"",
+			"const mapStateToProps = state => {", 
+			"\treturn{",
+			"\t\t$4",					
+			"\t}",
+			"}",
+			"",			
+			"export default connect($5, $6)($1);"
+		]
+	},
+
+	"Cria Redux Reducer": {
+		"prefix": "xrr",
+		"body": [
+			"export default (state = INITIAL_STATE, action) => {",
+			"\tswitch (action.type) {",
+			"\t\tcase $1:",
+			"\t\t\t$2",
+			"\t\tdefault:",
+			"\t\t\treturn state;",
+			"\t}",
+			"};"
+		]
+	},
+	
+	"Cria Action Reducer ":{
+		"prefix": "xar",
+		"body": [
+			"export const $1 = ($2)=>{",
+			"\treturn{",
+			"\t\ttype:\"$3\",",
+			"\t\tpayload: $4",
+			"\t}",
+			"}"
+		]
+	},
+
+	"Cria Action Reducer Dispach":{
+		"prefix": "xard",
+		"body": [
+			"export const $1 = ($2)=>{",
+			"return (dispatch) => {",
+			"\tdispatch(",
+			"\t\t{",
+			"\t\t\ttype: $3,",
+			"\t\t\tpayload:$4",                      
+			"\t\t}",
+			"\t)",
+			"}"
+		]
+	}
